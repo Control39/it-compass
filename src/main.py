@@ -8,7 +8,12 @@ import sys
 import logging
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+import sys
+from pathlib import Path
+
+# Add the project root to the path to allow imports
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 try:
     from src.core.tracker import CareerTracker
@@ -27,18 +32,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-def main():
-    try:
-        app = ITCompassApp()
-        app.run()
-    except KeyboardInterrupt:
-        print("\n\n👋 До свидания!")
-        sys.exit(0)
-    except Exception as e:
-        logger.error(f"Критическая ошибка: {e}")
-        print(f"❌ Критическая ошибка: {e}")
-        sys.exit(1)
 
 class ITCompassApp:
     def __init__(self):
@@ -250,6 +243,18 @@ class ITCompassApp:
                 logger.error(f"Критическая ошибка в главном цикле: {e}")
                 print(f"❌ Критическая ошибка: {e}")
                 break
+
+def main():
+    try:
+        app = ITCompassApp()
+        app.run()
+    except KeyboardInterrupt:
+        print("\n\n👋 До свидания!")
+        sys.exit(0)
+    except Exception as e:
+        logger.error(f"Критическая ошибка: {e}")
+        print(f"❌ Критическая ошибка: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
