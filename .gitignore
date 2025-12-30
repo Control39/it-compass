@@ -1,20 +1,33 @@
+```
+# Dependencies
 __pycache__/
-*.py[cod]
-*$py.class
-.Python
-build/
-dist/
-*.log
-*.db
-*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
 .env
-.venv
-.vscode/
-.idea/
-.DS_Store
+.env.local
+.env.*
+
+# Logs
+*.log
+
+# Temp files
 *.tmp
-*.temp
-docs/my_portfolio.html
+*.swp
+*.swo
+
+# Coverage
 .coverage
+coverage/
 htmlcov/
-.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg
+*.egg-info/
+*.whl
+MANIFEST
+```
