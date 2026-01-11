@@ -1,0 +1,16 @@
+{
+    "show_motivational_quotes": true,
+    "quote_frequency": "daily",
+    "max_quotes_per_session": 1,
+    "use_gigachat_for_quotes": false,
+    "low_energy_mode": false,
+    "logging_level": "INFO",
+    "portfolio_generation": {
+        "auto_save": true,
+        "template_path": "docs/portfolio_template.md"
+    },
+    "mental_support": {
+        "show_on_startup": true,
+        "crisis_contacts_enabled": true
+    }
+}
